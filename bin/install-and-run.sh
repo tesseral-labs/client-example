@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Cloning example application..."
-git clone https://github.com/tesseral-labs/client-example.git
+git clone git@github.com:tesseral-labs/client-example.git
 
 cd client-example
 
