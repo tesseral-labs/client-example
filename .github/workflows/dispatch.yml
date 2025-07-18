@@ -29,6 +29,7 @@ jobs:
         with:
           tag_name: ${{ github.event.inputs.ref }}
           files: |
+            bin/install-and-run.ps1
             bin/install-and-run.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
