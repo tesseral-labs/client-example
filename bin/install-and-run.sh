@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Cloning example application..."
-git clone git@github.com:tesseral-labs/client-example.git
+git clone git@github.com:tesseral-labs/tesseral-example.git
 
-cd client-example
+cd tesseral-example
 
 echo "Creating .env file..."
 cat <<EOF > .env
