@@ -1,0 +1,21 @@
+name: ci
+
+on: [push]
+
+jobs:
+  release:
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to create a release
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Upload assets
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            bin/install-and-run.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
