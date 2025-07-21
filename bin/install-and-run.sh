@@ -7,7 +7,7 @@ cd tesseral-example
 
 echo "Creating .env file..."
 cat <<EOF > .env
-TESSERAL_PUBLISHABLE_KEY=$0
+TESSERAL_PUBLISHABLE_KEY=$1
 EOF
 
 echo "Running the example application..."
